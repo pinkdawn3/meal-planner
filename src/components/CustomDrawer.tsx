@@ -7,16 +7,22 @@ import Homescreen from "../screens/Homescreen";
 import WeeklyMenu from "../screens/WeeklyMenu";
 import Recipes from "../screens/Recipes";
 
-const Drawer = createDrawerNavigator();
+export type BottomDrawerParamList = {
+  Inicio: undefined;
+  Recetas: undefined;
+  Menú: undefined;
+};
+
+const Drawer = createDrawerNavigator<BottomDrawerParamList>();
 
 const CustomDrawer = () => {
   const drawerNavigatorScreenOptions: DrawerNavigationOptions = {
-    headerTitle: "App de Alba",
+    headerTitle: "Menús",
     headerTitleAlign: "center",
     headerStyle: {
-      backgroundColor: "#FFB6C1",
+      backgroundColor: "#dbeed0",
     },
-    headerTintColor: "white",
+    headerTintColor: "black",
     drawerItemStyle: {
       width: "93%",
     },
@@ -29,7 +35,7 @@ const CustomDrawer = () => {
 
   return (
     <Drawer.Navigator
-      initialRouteName="Home"
+      initialRouteName="Inicio"
       screenOptions={drawerNavigatorScreenOptions}
     >
       <Drawer.Screen name="Inicio" component={Homescreen} />

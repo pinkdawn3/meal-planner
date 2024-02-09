@@ -1,11 +1,37 @@
 import React from "react";
+import { View, Text, StyleSheet, Pressable } from "react-native";
+import { RecipeContext } from "../contexts/RecipesContext";
+import { RootStackParamList } from "../components/AppStack";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { DrawerActions } from "@react-navigation/native";
 
-import { View, Text, StyleSheet } from "react-native";
+type Props = NativeStackScreenProps<RootStackParamList, "Inicio">;
 
-const Homescreen = () => {
+const Homescreen: React.FC<Props> = ({ navigation }: Props) => {
+  const { todaysRecipe } = React.useContext(RecipeContext);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Prueba</Text>
+      <Text style={styles.title}>Hoy toca: {todaysRecipe.name}</Text>
+      <View>
+        <Pressable style={styles.buttonRecipe}>
+          <Text style={styles.buttonText}>Ver receta</Text>
+        </Pressable>
+        <Pressable
+          style={styles.buttonSeeMenu}
+          onPress={() =>
+            navigation.navigate("CustomDrawer", { screen: "Menú" })
+          }
+        >
+          <Text style={styles.buttonText}>Ver menú</Text>
+        </Pressable>
+      </View>
+
+      <Pressable
+        style={styles.newMenuButton}
+        onPress={() => navigation.navigate("NewMenu")}
+      >
+        <Text style={styles.buttonText}>CREAR MENÚ NUEVO</Text>
+      </Pressable>
     </View>
   );
 };
@@ -15,7 +41,8 @@ export default Homescreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fce8e6",
+    backgroundColor: "white",
+    margin: "auto",
   },
   title: {
     borderRadius: 30,
@@ -28,18 +55,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "grey",
   },
-  image: {
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 40,
-    alignSelf: "center",
-    borderRadius: 100,
-    height: "43%",
-    width: "80%",
-    borderWidth: 1,
-    borderColor: "grey",
-  },
-  button: {
+
+  buttonSeeMenu: {
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
@@ -47,13 +64,33 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 60,
     borderRadius: 10,
-    backgroundColor: "royalblue",
+    backgroundColor: "#f8d7d2",
   },
   buttonText: {
     fontSize: 16,
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "white",
+    color: "black",
+  },
+  buttonRecipe: {
+    backgroundColor: "#dbeed0",
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 20,
+    paddingVertical: 12,
+    paddingHorizontal: 60,
+    borderRadius: 10,
+  },
+  newMenuButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    marginTop: 20,
+    paddingVertical: 30,
+    paddingHorizontal: 50,
+    borderRadius: 20,
+    backgroundColor: "#f08a6e",
   },
 });

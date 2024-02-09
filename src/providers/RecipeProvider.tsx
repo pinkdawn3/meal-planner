@@ -1,6 +1,6 @@
 import React from "react";
 import { RecipeContext, RecipeTypeContext } from "../contexts/RecipesContext";
-import { Recipe } from "../types/Recipe";
+import { MenuItem, Recipe } from "../types/RecipeType";
 
 type RecipeProviderProps = {
   children: JSX.Element | JSX.Element[];
@@ -10,20 +10,26 @@ function RecipeProvider(props: RecipeProviderProps) {
   const { children } = props;
 
   let recipeDefault: Recipe = {
-    name: "",
-    keyIngredient: "",
+    name: "AAA",
+    keyIngredient: "KKK",
     ingredients: [],
-    description: "",
+    description: "BBB",
   };
 
   const [recipe, setRecipe] = React.useState(recipeDefault);
+  const [todaysRecipe, setTodaysRecipe] = React.useState(recipeDefault);
   const [recipes, setRecipes] = React.useState<Recipe[]>([]);
+  const [currentMenu, setCurrentMenu] = React.useState<MenuItem[]>([]);
 
   const defaultValue: RecipeTypeContext = {
     recipe,
     setRecipe,
+    todaysRecipe,
+    setTodaysRecipe,
     recipes,
     setRecipes,
+    currentMenu,
+    setCurrentMenu,
   };
 
   return (

@@ -4,3 +4,8 @@ export type Recipe = {
   ingredients: string[];
   description: string;
 };
+
+export type MenuItem = {
+  day: string;
+  recipe: Recipe;
+};

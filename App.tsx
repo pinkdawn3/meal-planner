@@ -2,20 +2,19 @@ import { StyleSheet, View } from "react-native";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import UserInfoProvider from "./src/providers/RecipeProvider";
+import RecipeProvider from "./src/providers/RecipeProvider";
 import CustomDrawer from "./src/components/CustomDrawer";
-
-// endpoint: 172.16.102.33:8888/users/all
+import AppStack from "./src/components/AppStack";
 
 export default function App() {
   return (
-    <UserInfoProvider>
+    <RecipeProvider>
       <View style={styles.container}>
         <NavigationContainer>
-          <CustomDrawer />
+          <AppStack />
         </NavigationContainer>
       </View>
-    </UserInfoProvider>
+    </RecipeProvider>
   );
 }
 
