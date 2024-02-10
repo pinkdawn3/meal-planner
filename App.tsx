@@ -3,7 +3,6 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import RecipeProvider from "./src/providers/RecipeProvider";
-import CustomDrawer from "./src/components/CustomDrawer";
 import AppStack from "./src/components/AppStack";
 
 export default function App() {

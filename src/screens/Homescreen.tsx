@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import { RecipeContext } from "../contexts/RecipesContext";
 import { RootStackParamList } from "../components/AppStack";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { DrawerActions } from "@react-navigation/native";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Inicio">;
 

@@ -6,11 +6,13 @@ import React from "react";
 import Homescreen from "../screens/Homescreen";
 import WeeklyMenu from "../screens/WeeklyMenu";
 import Recipes from "../screens/Recipes";
+import AddRecipe from "./cards/AddRecipe";
 
 export type BottomDrawerParamList = {
   Inicio: undefined;
   Recetas: undefined;
   Menú: undefined;
+  AddRecipe: undefined;
 };
 
 const Drawer = createDrawerNavigator<BottomDrawerParamList>();
