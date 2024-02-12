@@ -1,63 +1,160 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, View, Text, Pressable } from "react-native";
 import React from "react";
 import { RecipeContext } from "../../contexts/RecipesContext";
 import { Recipe } from "../../types/RecipeType";
+import { Button, Menu, PaperProvider } from "react-native-paper";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../AppStack";
 
-interface AddRecipeProps {
-  setShowAddRecipe: React.Dispatch<React.SetStateAction<boolean>>;
-}
+type Props = NativeStackScreenProps<RootStackParamList, "NewRecipe">;
 
-const AddRecipe: React.FC<AddRecipeProps> = ({ setShowAddRecipe }) => {
-  const { recipe, setRecipe, recipes, setRecipes } =
-    React.useContext(RecipeContext);
-
-  const handleInputChange = async (field: string, value: string) => {
-    console.log(recipe);
-
-    setRecipe({
-      ...recipe,
-      [field]: value,
-    });
-  };
+const AddRecipe = ({ navigation }: Props) => {
+  const { setRecipes } = React.useContext(RecipeContext);
 
   const addRecipe = () => {
     setRecipes((prevState: Recipe[]) => [...prevState, recipe]);
-    console.log(recipes);
+
+    navigation.goBack();
   };
+
+  const [recipe, setRecipe] = React.useState<Recipe>({
+    name: "",
+    type: "",
+    ingredients: [""],
+    steps: [""],
+  });
+
+  const [typeMenuVisible, setTypeMenuVisible] = React.useState(false);
+
+  const addIngredient = () => {
+    setRecipe((prevState) => ({
+      ...prevState,
+      ingredients: [...prevState.ingredients, ""],
+    }));
+  };
+
+  const addStep = () => {
+    setRecipe((prevState) => ({
+      ...prevState,
+      steps: [...prevState.steps, ""],
+    }));
+  };
+
+  const handleChangeIngredient = (text: string, index: number) => {
+    setRecipe((prevState) => {
+      const newIngredients = [...prevState.ingredients];
+      newIngredients[index] = text;
+      return { ...prevState, ingredients: newIngredients };
+    });
+  };
+
+  const handleChangeStep = (text: string, index: number) => {
+    setRecipe((prevState) => {
+      const newSteps = [...prevState.steps];
+      newSteps[index] = text;
+      return { ...prevState, steps: newSteps };
+    });
+  };
+
+  const handleTypeSelect = (type: string) => {
+    setRecipe((prevState) => ({
+      ...prevState,
+      type,
+    }));
+    setTypeMenuVisible(false);
+  };
+
   return (
-    <View>
+    <PaperProvider>
       <View style={styles.container}>
         <Text>Nombre</Text>
         <TextInput
           style={styles.inputs}
           placeholder="Inserte nombre..."
-          onChangeText={(value) => handleInputChange("name", value)}
           value={recipe.name}
+          onChangeText={(text) =>
+            setRecipe((prevState) => ({ ...prevState, name: text }))
+          }
         />
-        <Text>Ingrediente</Text>
-        <TextInput
-          style={styles.inputs}
-          placeholder="Inserte ingrediente..."
-          onChangeText={(value) => handleInputChange("keyIngredient", value)}
-          value={recipe.keyIngredient}
-        />
-        <Text>Descripción</Text>
-        <TextInput
-          style={styles.inputs}
-          placeholder="Inserte descripción..."
-          onChangeText={(value) => handleInputChange("description", value)}
-          value={recipe.description}
-        />
+        <Text>Tipo</Text>
+        <Menu
+          visible={typeMenuVisible}
+          onDismiss={() => setTypeMenuVisible(false)}
+          anchor={
+            <Pressable
+              style={styles.inputs}
+              onPress={() => setTypeMenuVisible(true)}
+            >
+              <Text>{recipe.type ? recipe.type : "Seleccionar tipo"}</Text>
+            </Pressable>
+          }
+        >
+          <Menu.Item
+            onPress={() => handleTypeSelect("Proteína")}
+            title="Proteína"
+          />
+          <Menu.Item onPress={() => handleTypeSelect("Fibra")} title="Fibra" />
+          <Menu.Item
+            onPress={() => handleTypeSelect("Hidratos")}
+            title="Hidratos"
+          />
+        </Menu>
+        <Text>Ingredientes</Text>
+        {recipe.ingredients.map((ingredient, index) => (
+          <View key={`ingredient-${index}`}>
+            <TextInput
+              style={styles.inputs}
+              placeholder="Inserte un ingrediente..."
+              value={ingredient}
+              onChangeText={(text) => handleChangeIngredient(text, index)}
+            />
+
+            {index > 0 && (
+              <Button
+                onPress={() =>
+                  setRecipe((prevState) => ({
+                    ...prevState,
+                    ingredients: prevState.ingredients.filter(
+                      (_, i) => i !== index
+                    ),
+                  }))
+                }
+              >
+                Delete
+              </Button>
+            )}
+          </View>
+        ))}
+        <Button onPress={addIngredient}>Add Ingredient</Button>
+        <Text>Pasos</Text>
+        {recipe.steps.map((step, index) => (
+          <View key={`step-${index}`}>
+            <TextInput
+              style={styles.inputs}
+              placeholder="Inserte paso..."
+              value={step}
+              onChangeText={(text) => handleChangeStep(text, index)}
+            />
+            {index > 0 && (
+              <Button
+                onPress={() =>
+                  setRecipe((prevState) => ({
+                    ...prevState,
+                    steps: prevState.steps.filter((_, i) => i !== index),
+                  }))
+                }
+              >
+                Delete
+              </Button>
+            )}
+          </View>
+        ))}
+        <Button onPress={addStep}>Add Step</Button>
+        <Pressable style={styles.button} onPress={addRecipe}>
+          <Text>Añadir receta</Text>
+        </Pressable>
       </View>
-
-      <Pressable style={styles.button} onPress={() => addRecipe()}>
-        <Text>Añadir receta</Text>
-      </Pressable>
-
-      <Pressable style={styles.button} onPress={() => setShowAddRecipe(false)}>
-        <Text>Cerrar</Text>
-      </Pressable>
-    </View>
+    </PaperProvider>
   );
 };
 
@@ -65,26 +162,21 @@ export default AddRecipe;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
+    alignItems: "flex-start",
+    margin: 50,
   },
   button: {
     alignItems: "center",
     justifyContent: "center",
-    alignSelf: "center",
     marginTop: 20,
     paddingVertical: 12,
     paddingHorizontal: 60,
     borderRadius: 10,
     backgroundColor: "#f8d7d2",
   },
-
   inputs: {
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom: 20,
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 10,

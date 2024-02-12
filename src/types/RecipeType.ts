@@ -1,8 +1,8 @@
 export type Recipe = {
   name: string;
-  keyIngredient: string;
+  type: string;
   ingredients: string[];
-  description: string;
+  steps: string[];
 };
 
 export type MenuItem = {

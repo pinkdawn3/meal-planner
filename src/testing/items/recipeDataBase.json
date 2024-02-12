@@ -1,0 +1,404 @@
+[
+  {
+    "name": "Tortilla de Patatas",
+    "type": "Proteína",
+    "ingredients": ["patatas", "huevos", "cebolla", "aceite de oliva", "sal"],
+    "steps": [
+      "Pelar y cortar las patatas en rodajas finas.",
+      "Freír las patatas en aceite caliente.",
+      "Batir los huevos y añadir las patatas fritas y la cebolla.",
+      "Cocinar la tortilla en una sartén hasta que esté dorada por ambos lados."
+    ]
+  },
+  {
+    "name": "Ensalada César",
+    "type": "Fibra",
+    "ingredients": [
+      "lechuga romana",
+      "pan tostado",
+      "pollo a la parrilla",
+      "parmesano rallado",
+      "salsa César"
+    ],
+    "steps": [
+      "Cortar la lechuga romana en trozos pequeños.",
+      "Agregar el pollo a la parrilla cortado en tiras.",
+      "Añadir el pan tostado y el queso parmesano rallado.",
+      "Mezclar con la salsa César y servir."
+    ]
+  },
+  {
+    "name": "Paella",
+    "type": "Hidratos",
+    "ingredients": [
+      "arroz",
+      "pollo",
+      "conejo",
+      "judías verdes",
+      "pimiento rojo",
+      "tomate",
+      "ajo",
+      "azafrán",
+      "caldo de pollo",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Saltear el pollo y el conejo en una paellera con aceite de oliva.",
+      "Añadir el tomate picado y las judías verdes.",
+      "Incorporar el arroz y rehogar.",
+      "Agregar el caldo de pollo caliente y el azafrán.",
+      "Dejar cocinar a fuego medio hasta que el arroz esté en su punto."
+    ]
+  },
+  {
+    "name": "Gazpacho Andaluz",
+    "type": "Fibra",
+    "ingredients": [
+      "tomates maduros",
+      "pepino",
+      "pimiento verde",
+      "cebolla",
+      "diente de ajo",
+      "pan duro",
+      "vinagre de vino",
+      "aceite de oliva",
+      "sal",
+      "agua"
+    ],
+    "steps": [
+      "Trocear los tomates, el pepino, el pimiento, la cebolla y el ajo.",
+      "Remojar el pan duro en agua.",
+      "Mezclar todos los ingredientes en una batidora hasta obtener una textura suave.",
+      "Añadir el vinagre de vino, el aceite de oliva y sal al gusto.",
+      "Refrigerar antes de servir."
+    ]
+  },
+  {
+    "name": "Lentejas Estofadas",
+    "type": "Proteína",
+    "ingredients": [
+      "lentejas",
+      "cebolla",
+      "zanahoria",
+      "pimiento rojo",
+      "tomate",
+      "ajo",
+      "chorizo",
+      "pimentón",
+      "caldo de verduras",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Rehogar la cebolla, el pimiento y la zanahoria en una olla con aceite de oliva.",
+      "Añadir el chorizo y el ajo picado.",
+      "Incorporar el tomate triturado y el pimentón.",
+      "Agregar las lentejas y el caldo de verduras.",
+      "Dejar cocinar a fuego lento hasta que las lentejas estén tiernas."
+    ]
+  },
+  {
+    "name": "Tortilla Española",
+    "type": "Proteína",
+    "ingredients": ["patatas", "huevos", "cebolla", "aceite de oliva", "sal"],
+    "steps": [
+      "Pelar y cortar las patatas en rodajas finas.",
+      "Freír las patatas en aceite caliente.",
+      "Batir los huevos y añadir las patatas fritas y la cebolla.",
+      "Cocinar la tortilla en una sartén hasta que esté dorada por ambos lados."
+    ]
+  },
+  {
+    "name": "Pasta Carbonara",
+    "type": "Hidratos",
+    "ingredients": [
+      "espaguetis",
+      "panceta",
+      "huevos",
+      "queso parmesano",
+      "nata",
+      "ajo",
+      "pimienta negra",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Cocinar la pasta en agua hirviendo con sal hasta que esté al dente.",
+      "Saltear la panceta en una sartén con aceite de oliva.",
+      "Batir los huevos y añadir el queso parmesano rallado y la nata.",
+      "Mezclar la pasta cocida con la panceta y la mezcla de huevos.",
+      "Cocinar a fuego bajo hasta que la salsa espese."
+    ]
+  },
+  {
+    "name": "Pollo al Curry",
+    "type": "Proteína",
+    "ingredients": [
+      "pollo",
+      "cebolla",
+      "pimiento rojo",
+      "pimiento verde",
+      "tomate",
+      "leche de coco",
+      "curry en polvo",
+      "jengibre",
+      "ajo",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Saltear la cebolla, los pimientos, el jengibre y el ajo en una sartén con aceite de oliva.",
+      "Agregar el pollo cortado en trozos y cocinar hasta que esté dorado.",
+      "Incorporar el tomate picado y cocinar hasta que se reduzca el líquido.",
+      "Añadir la leche de coco y el curry en polvo.",
+      "Dejar cocinar a fuego lento hasta que el pollo esté tierno."
+    ]
+  },
+  {
+    "name": "Arroz con Leche",
+    "type": "Hidratos",
+    "ingredients": [
+      "arroz",
+      "leche",
+      "azúcar",
+      "canela en rama",
+      "piel de limón"
+    ],
+    "steps": [
+      "Cocinar el arroz en agua con la canela en rama y la piel de limón hasta que esté tierno.",
+      "Agregar la leche y el azúcar.",
+      "Cocinar a fuego lento hasta que el arroz esté cremoso.",
+      "Retirar la canela y la piel de limón antes de servir.",
+      "Espolvorear con canela en polvo."
+    ]
+  },
+  {
+    "name": "Sopa de Tomate",
+    "type": "Fibra",
+    "ingredients": [
+      "tomates maduros",
+      "cebolla",
+      "zanahoria",
+      "pimiento rojo",
+      "ajo",
+      "caldo de verduras",
+      "aceite de oliva",
+      "sal",
+      "pimienta negra"
+    ],
+    "steps": [
+      "Rehogar la cebolla, la zanahoria y el pimiento en una olla con aceite de oliva.",
+      "Añadir el ajo picado y los tomates troceados.",
+      "Verter el caldo de verduras y cocinar a fuego lento hasta que los vegetales estén tiernos.",
+      "Triturar la sopa hasta obtener una textura suave.",
+      "Condimentar con sal y pimienta negra al gusto antes de servir."
+    ]
+  },
+  {
+    "name": "Croquetas de Jamón",
+    "type": "Proteína",
+    "ingredients": [
+      "jamón serrano",
+      "leche",
+      "harina",
+      "mantequilla",
+      "nuez moscada",
+      "huevos",
+      "pan rallado",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Picar el jamón serrano en trozos pequeños.",
+      "Cocinar la mantequilla en una olla y añadir la harina para hacer una bechamel.",
+      "Agregar la leche caliente poco a poco y cocinar hasta que espese.",
+      "Incorporar el jamón picado y la nuez moscada.",
+      "Extender la masa en una bandeja y refrigerar hasta que esté firme.",
+      "Formar las croquetas, pasarlas por huevo batido y pan rallado.",
+      "Freír en aceite caliente hasta que estén doradas."
+    ]
+  },
+  {
+    "name": "Gazpacho de Sandía",
+    "type": "Fibra",
+    "ingredients": [
+      "sandía",
+      "tomates",
+      "pepino",
+      "pimiento rojo",
+      "cebolla",
+      "ajo",
+      "vinagre de jerez",
+      "aceite de oliva",
+      "sal",
+      "pimienta negra"
+    ],
+    "steps": [
+      "Pelar y trocear la sandía, los tomates, el pepino y el pimiento.",
+      "Picar la cebolla y el ajo.",
+      "Mezclar todos los ingredientes en una batidora hasta obtener una textura suave.",
+      "Agregar el vinagre de jerez, el aceite de oliva, sal y pimienta negra al gusto.",
+      "Refrigerar antes de servir."
+    ]
+  },
+  {
+    "name": "Pizza Margarita",
+    "type": "Hidratos",
+    "ingredients": [
+      "masa de pizza",
+      "salsa de tomate",
+      "mozzarella",
+      "tomates cherry",
+      "albahaca fresca",
+      "aceite de oliva",
+      "sal"
+    ],
+    "steps": [
+      "Extender la masa de pizza sobre una bandeja.",
+      "Untar la salsa de tomate sobre la masa.",
+      "Colocar rodajas de mozzarella y los tomates cherry cortados por la mitad.",
+      "Hornear a temperatura alta hasta que la masa esté dorada y el queso derretido.",
+      "Agregar hojas de albahaca fresca y un chorrito de aceite de oliva antes de servir."
+    ]
+  },
+  {
+    "name": "Hamburguesa Casera",
+    "type": "Proteína",
+    "ingredients": [
+      "carne picada",
+      "pan de hamburguesa",
+      "lechuga",
+      "tomate",
+      "cebolla",
+      "queso cheddar",
+      "mostaza",
+      "ketchup",
+      "sal",
+      "pimienta"
+    ],
+    "steps": [
+      "Formar las hamburguesas con la carne picada y condimentar con sal y pimienta.",
+      "Cocinar las hamburguesas en una sartén caliente hasta que estén doradas por ambos lados.",
+      "Tostar ligeramente los panes de hamburguesa.",
+      "Armar las hamburguesas colocando la carne, la lechuga, el tomate, la cebolla, el queso cheddar y las salsas al gusto."
+    ]
+  },
+  {
+    "name": "Tarta de Manzana",
+    "type": "Hidratos",
+    "ingredients": [
+      "masa quebrada",
+      "manzanas",
+      "azúcar",
+      "canela en polvo",
+      "mantequilla",
+      "harina",
+      "huevo",
+      "leche"
+    ],
+    "steps": [
+      "Pelar y cortar las manzanas en rodajas finas.",
+      "Mezclar las manzanas con azúcar y canela en polvo.",
+      "Forrar un molde con la masa quebrada y pinchar el fondo con un tenedor.",
+      "Colocar las manzanas en el molde.",
+      "Preparar una mezcla de harina, azúcar, mantequilla y huevo.",
+      "Verter la mezcla sobre las manzanas y hornear hasta que esté dorada.",
+      "Servir caliente con una bola de helado de vainilla."
+    ]
+  },
+  {
+    "name": "Pasta con Pesto",
+    "type": "Hidratos",
+    "ingredients": [
+      "pasta corta",
+      "albahaca fresca",
+      "piñones",
+      "queso parmesano",
+      "ajo",
+      "aceite de oliva",
+      "sal",
+      "pimienta"
+    ],
+    "steps": [
+      "Cocinar la pasta en agua hirviendo con sal hasta que esté al dente.",
+      "Triturar la albahaca fresca, los piñones, el queso parmesano y el ajo en un procesador de alimentos.",
+      "Agregar aceite de oliva y mezclar hasta obtener una salsa homogénea.",
+      "Escurrir la pasta y mezclar con la salsa de pesto.",
+      "Condimentar con sal y pimienta al gusto antes de servir."
+    ]
+  },
+  {
+    "name": "Crema de Calabaza",
+    "type": "Fibra",
+    "ingredients": [
+      "calabaza",
+      "cebolla",
+      "zanahoria",
+      "patata",
+      "caldo de verduras",
+      "nata",
+      "aceite de oliva",
+      "sal",
+      "pimienta negra"
+    ],
+    "steps": [
+      "Pelar y cortar la calabaza, la cebolla, la zanahoria y la patata en trozos pequeños.",
+      "Rehogar la cebolla en una olla con aceite de oliva.",
+      "Agregar la calabaza, la zanahoria y la patata y cocinar unos minutos.",
+      "Verter el caldo de verduras caliente y cocinar hasta que las verduras estén tiernas.",
+      "Triturar la sopa hasta obtener una textura suave.",
+      "Incorporar la nata y cocinar unos minutos más.",
+      "Condimentar con sal y pimienta negra al gusto antes de servir."
+    ]
+  },
+  {
+    "name": "Tacos de Pollo",
+    "type": "Proteína",
+    "ingredients": [
+      "pollo",
+      "tortillas de maíz",
+      "cebolla",
+      "pimiento rojo",
+      "pimiento verde",
+      "tomate",
+      "cilantro",
+      "lima",
+      "aceite de oliva",
+      "sal",
+      "pimienta"
+    ],
+    "steps": [
+      "Cortar el pollo en tiras y marinar con aceite de oliva, sal y pimienta.",
+      "Saltear la cebolla y los pimientos en una sartén con aceite de oliva.",
+      "Agregar el pollo y cocinar hasta que esté dorado.",
+      "Calentar las tortillas de maíz en una sartén caliente.",
+      "Rellenar las tortillas con el pollo, la cebolla, los pimientos, el tomate picado y el cilantro.",
+      "Exprimir lima por encima antes de servir."
+    ]
+  },
+  {
+    "name": "Ratatouille",
+    "type": "Fibra",
+    "ingredients": [
+      "berenjena",
+      "calabacín",
+      "pimiento rojo",
+      "pimiento verde",
+      "cebolla",
+      "tomate",
+      "ajo",
+      "tomate triturado",
+      "aceite de oliva",
+      "sal",
+      "pimienta"
+    ],
+    "steps": [
+      "Cortar todas las verduras en rodajas finas.",
+      "Rehogar la cebolla y el ajo en una sartén con aceite de oliva.",
+      "Agregar el resto de las verduras y cocinar hasta que estén tiernas.",
+      "Incorporar el tomate triturado y cocinar unos minutos más.",
+      "Condimentar con sal y pimienta negra al gusto antes de servir."
+    ]
+  }
+]

@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 60,
     borderRadius: 10,
+    borderColor: "gray",
+    borderWidth: 1,
     backgroundColor: "#f8d7d2",
   },
   buttonText: {
@@ -81,6 +83,8 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 60,
     borderRadius: 10,
+    borderColor: "gray",
+    borderWidth: 1,
   },
   newMenuButton: {
     alignItems: "center",
@@ -91,5 +95,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 50,
     borderRadius: 20,
     backgroundColor: "#f08a6e",
+    borderColor: "gray",
+    borderWidth: 1,
   },
 });
